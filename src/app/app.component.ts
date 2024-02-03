@@ -29,7 +29,6 @@ export class AppComponent implements OnInit {
         this.posts = [...response];
         this.filteredPosts = [...this.posts];
         this.users = [...new Set(response.map(post => post.userId))];
-        console.log(this.users);
       }
     });
     this.userFormControl.valueChanges.subscribe(value => {
