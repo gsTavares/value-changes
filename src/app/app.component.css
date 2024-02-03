@@ -1,0 +1,106 @@
+main > header {
+    display: flex;
+    justify-content: center;
+    padding: 1.2rem;
+    color: #f3f3f3;
+    text-align: center;
+}
+
+.filter {
+    background-color: #fa8d2d;
+    padding: 1.3rem;
+    margin: 1rem;
+    border-radius: .25rem;
+}
+
+.filter form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > label {
+    color: #f3f3f3;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+form > select {
+    border: none;
+    border-radius: .25rem;
+    padding-block: .5rem;
+    padding-inline: 1.2rem;
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+.post-card {
+    background-color: #9fe7f5;
+    margin-bottom: 1.3rem;
+    border-radius: .25rem;
+}
+
+.post-card > header {
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.post-card .title {
+    padding-inline: 1.5rem;
+    margin-top: 1.2rem;
+    margin-bottom: .7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.post-card .user-id {
+    font-weight: 500;
+    color: rgb(42, 42, 42, 0.8);
+}
+
+.post-card .content {
+    text-align: justify;
+    padding: 1rem;
+    font-weight: 500;
+}
+
+.post-card .signature {
+    padding: 1rem;
+    text-align: right;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 700px) {
+    .posts {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.3rem;
+    }
+
+    .post-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post-card .title {
+        height: 50px;
+    }
+
+    .post-card .signature {
+        margin-top: auto;
+    }
+
+}
+
+@media screen and (min-width: 1300px) {
+    .posts {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1.3rem;
+    }
+}
